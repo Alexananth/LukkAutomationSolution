@@ -4,11 +4,11 @@ import { Phone, Mail, MapPin } from 'lucide-react';
 
 const ContactPage = () => {
   return (
-    <div className="container mx-auto px-6 py-12">
+    <div className="container mx-auto px-6 py-8 md:py-12">
       <h1 className="text-4xl font-bold text-center mb-12">Get in Touch</h1>
       <div className="flex flex-col lg:flex-row gap-12">
         {/* Form */}
-        <div className="lg:w-2/3 bg-milky-white p-8 rounded-large shadow-lg border border-soft-highlight">
+        <div className="lg:w-2/3 bg-milky-white p-6 md:p-8 rounded-large shadow-lg border border-soft-highlight">
           <form>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div>

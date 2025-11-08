@@ -10,12 +10,12 @@ const solutions = [
 
 const SolutionsPage = () => {
   return (
-    <div className="container mx-auto px-6 py-12">
+    <div className="container mx-auto px-6 py-8 md:py-12">
       <h1 className="text-4xl font-bold text-center mb-12">Our Core Solutions</h1>
       <div className="space-y-12">
         {solutions.map((solution, index) => (
-          <div key={index} className="flex flex-col md:flex-row items-center gap-8 p-8 bg-hover-effect/50 rounded-large shadow-sm">
-            <div className="flex-shrink-0 bg-milky-white p-6 rounded-full shadow-md">
+          <div key={index} className="flex flex-col md:flex-row items-center gap-6 md:gap-8 p-6 bg-hover-effect/50 rounded-large shadow-sm">
+            <div className="flex-shrink-0 bg-milky-white p-4 rounded-full shadow-md">
               {solution.icon}
             </div>
             <div>

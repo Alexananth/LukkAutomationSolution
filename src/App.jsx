@@ -10,10 +10,12 @@ import IndustriesPage from './pages/IndustriesPage';
 import PartnersPage from './pages/PartnersPage';
 import CareersPage from './pages/CareersPage';
 import ContactPage from './pages/ContactPage';
+import CursorFollow from './components/CursorFollow';
 
 function App() {
     return (
         <div className="flex flex-col min-h-screen">
+            <CursorFollow />
             <Navbar />
             <main className="flex-grow">
                 <Routes>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Bot, Menu, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const navLinks = [
   { title: 'Home', path: '/' },
@@ -46,28 +47,36 @@ const Navbar = () => {
           </button>
         </div>
       </nav>
-      {isOpen && (
-        <div className="md:hidden bg-milky-white pb-4">
-          <div className="flex flex-col items-center space-y-4">
-            {navLinks.map((link) => (
-              <NavLink
-                key={link.title}
-                to={link.path}
-                onClick={() => setIsOpen(false)}
-                className={({ isActive }) =>
-                  `font-semibold text-lg transition-colors duration-300 ${
-                    isActive
-                      ? 'text-primary-accent'
-                      : 'text-text-color hover:text-primary-accent'
-                  }`
-                }
-              >
-                {link.title}
-              </NavLink>
-            ))}
-          </div>
-        </div>
-      )}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            className="md:hidden bg-milky-white absolute w-full shadow-lg"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="flex flex-col items-center space-y-4 py-4">
+              {navLinks.map((link) => (
+                <NavLink
+                  key={link.title}
+                  to={link.path}
+                  onClick={() => setIsOpen(false)}
+                  className={({ isActive }) =>
+                    `font-semibold text-lg transition-colors duration-300 ${
+                      isActive
+                        ? 'text-primary-accent'
+                        : 'text-text-color hover:text-primary-accent'
+                    }`
+                  }
+                >
+                  {link.title}
+                </NavLink>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 };

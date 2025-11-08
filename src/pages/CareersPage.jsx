@@ -9,14 +9,14 @@ const openings = [
 
 const CareersPage = () => {
   return (
-    <div className="bg-milky-white-alt min-h-screen py-12">
+    <div className="bg-milky-white-alt min-h-screen py-8 md:py-12">
       <div className="container mx-auto px-6">
         <h1 className="text-4xl font-bold text-center mb-6">Join Our Team</h1>
         <p className="text-center text-lg max-w-3xl mx-auto mb-12">
           We're looking for passionate innovators to help us build the future of automation. Explore our open positions and find your place at Lukk.
         </p>
 
-        <div className="bg-milky-white rounded-large shadow-lg p-8">
+        <div className="bg-milky-white rounded-large shadow-lg p-6">
           <h2 className="text-2xl font-bold text-primary-accent mb-6">Current Openings</h2>
           <div className="space-y-4">
             {openings.map((job, index) => (

@@ -10,17 +10,17 @@ const industries = [
 
 const IndustriesPage = () => {
   return (
-    <div className="py-12">
+    <div className="py-8 md:py-12">
       <h1 className="text-4xl font-bold text-center mb-12">Industries We Serve</h1>
       <div className="px-6">
         <div className="flex overflow-x-auto space-x-8 pb-8 snap-x snap-mandatory">
           {industries.map((industry, index) => (
-            <div key={index} className="snap-center flex-shrink-0 w-4/5 md:w-2/5 relative h-96 rounded-large overflow-hidden">
+            <div key={index} className="snap-center flex-shrink-0 w-4/5 md:w-2/5 relative h-80 rounded-large overflow-hidden">
               <img src={industry.image} alt={industry.name} className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-black/40"></div>
-              <div className="absolute bottom-0 left-0 p-6">
-                <div className="bg-primary-accent/80 p-4 rounded-large inline-block">
-                  <h2 className="text-2xl font-bold text-white">{industry.name}</h2>
+              <div className="absolute bottom-0 left-0 p-4 md:p-6">
+                <div className="bg-primary-accent/80 p-3 rounded-large inline-block">
+                  <h2 className="text-xl md:text-2xl font-bold text-white">{industry.name}</h2>
                 </div>
               </div>
             </div>

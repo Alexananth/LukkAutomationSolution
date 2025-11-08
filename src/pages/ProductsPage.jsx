@@ -13,7 +13,7 @@ const products = [
 
 const ProductsPage = () => {
   return (
-    <div className="container mx-auto px-6 py-12">
+    <div className="container mx-auto px-6 py-8 md:py-12">
       <h1 className="text-4xl font-bold text-center mb-12">Our Products</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {products.map((product, index) => (
@@ -31,7 +31,7 @@ const ProductsPage = () => {
           </motion.div>
         ))}
       </div>
-      <div className="text-center mt-20">
+      <div className="text-center mt-16">
         <Link to="/contact">
           <motion.button
             className="px-12 py-4 bg-primary-accent text-white font-bold text-xl rounded-large shadow-lg"
